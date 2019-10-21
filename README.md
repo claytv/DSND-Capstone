@@ -4,7 +4,7 @@ Capstone project for the Udacity Data Scientist Nanodegree. The goal of this pro
 We were provided with a very small subset of the data to which I used to set up my code in a jupyter notebook locally. We then could run analysis on a very large data set ( ~25 million rows ) using an AWS EMR cluster or use a medium sized dataset (~500 thousand rows ) using IBM Watson Studio. I originally performed this analysis connected to an AWS EMR cluster but finished the project using IBM Watson Studio. I go into these issues more later in the report. 
 
 ## Check these out 
-#### [Blog Post on Medium]
+#### [Blog Post on Medium](https://medium.com/@claytonvanhovel/udacity-data-science-nanodegrees-1b5a4c38c86d?sk=416f7a01ab1513b72caf732cb2202dcb)
 
 #### [HTML Version of Notebook](https://htmlpreview.github.io/?https://github.com/claytv/DSND-Capstone/blob/master/dsnd_capstone.html)
 
