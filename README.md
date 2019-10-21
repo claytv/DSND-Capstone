@@ -21,7 +21,7 @@ The data was provided by Udacity and is intended to simulate music streaming log
 * Evaluate trained models
 
 ## Evaluation Metrics 
-For this situation F1-Score is a good metric because it takes the weighted average of precision and recall. However, say for example the reason we wanted to predict if a user was going to cancel their account so that we could offer a promotion but the promotion had a signifigant cost associated. Then in this situation we might value a model that returns a lower number of False Positives and hence value a high precision score rather than a high F1 Score. 
+For this situation F1-Score is a good metric because it takes the weighted average of precision and recall. However, say for example the reason we wanted to predict if a user was going to cancel their account was so that we could offer a promotion but the promotion had a signifigant cost associated. Then in this situation we might value a model that returns a lower number of False Positives and hence value a high precision score rather than a high F1 Score. 
 
 ### Processing
 * Remove rows with null values for timestamp columns because it causes issue when creating 'days_since_reg' column
