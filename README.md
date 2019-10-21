@@ -12,7 +12,7 @@ We were provided with a very small subset of the data to which I used to set up 
 ## Data
 The data was provided by Udacity and is intended to simulate music streaming logs from a company such as Spotify or Pandora. 
 
-## Order of Analysis
+## Steps
 * Process data
 * Visualize some intuitions
 * Create features
@@ -23,24 +23,24 @@ The data was provided by Udacity and is intended to simulate music streaming log
 ## Evaluation Metrics 
 For this situation F1-Score is a good metric because it takes the weighted average of precision and recall. However, say for example the reason we wanted to predict if a user was going to cancel their account was so that we could offer a promotion but the promotion had a signifigant cost associated. Then in this situation we might value a model that returns a lower number of False Positives and hence value a high precision score rather than a high F1 Score. 
 
-### Processing
+## Processing
 * Remove rows with null values for timestamp columns because it causes issue when creating 'days_since_reg' column
 * Add column 'churn' which represents if the event was an account cancellation event
 * Convert timestamps to a readable format and compute difference between the time of the event and the time the user registered and store it in the variable 'days_since_reg'
 
-### Visualizng
-I visualized some intutions I had about the data. My intuitions that were most clearly supported by the visuals are the followin
+## Visualizng
+I visualized some intutions I had about the data. My intuitions that were most clearly supported by the visuals are the following
 
-#### How long a user has had their account
+### How long a user has had their account
 ![age of account](images/time_since_registration.png)
 
-#### The variety of artists listened to 
+### The variety of artists listened to 
 ![variety of artists](images/variety_of_artists.png)
 
-#### Average number of songs in a session 
+### Average number of songs in a session 
 ![average_sess_len](images/avg_sess_length.png)
 
-### Creating Features 
+## Creating Features 
 
 From the log data I created a dataframe with one row for each user and the following features
 
@@ -52,7 +52,7 @@ From the log data I created a dataframe with one row for each user and the follo
 * Number of songs added to a playlist
 
 
-### Classification Algorithms 
+## Classification Algorithms 
 I implemented and trained the models below using cross validation to return the corresponding results
 
 #### Naive Model ( Assumes no one churns )
@@ -69,14 +69,14 @@ I implemented and trained the models below using cross validation to return the 
 * Test F1-Score: 0.73
 
 
-### Discussion of Results
+## Discussion of Results
 The Naive model performed very well on this testing set because the distribution of classes was very uneven ( Not many users happened to cancel their account in the testing data ) which makes the naive model look really good. However, using the model with new data whos classifications are evenly split would produce far worse results. 
 
 With that being said, I think that Logistic Regression or Decisicon Tree would be the best model for new data based off of their accuracy and F1 scores. However, for this project we do not know what is being done when a user is predicted to cancel their account. 
 
 One assumption is that a promotion is offered when a user is predicted to cancel their account in order to incentivize the user to keep their account active. In this case if we assume that the cost of the promotion is signifigant and we want to minimize the number of promotions sent out we may look for a model that values precision more than accuracy. F1 score is the weighted average between precision and recall. Therefore, F1 may not be a good metric to look at in this situaion.
 
-### Issues Throughout the Project
+## Issues Throughout the Project
 1.) The main issue I had throughout this project was setting up a cluster in order to leverage Sparks distributed computing. I first did this project with the small subset of data to get the structure down for using Spark. After this I headed over to AWS to create an EMR cluster with notebook attached. Working with the notebook was glitchy, difficult to configure and I could not get the notebook to properly convert to HTML so that others could see my work. After hours and hours of searching the internet for solutions combined with trial and error I decided to give IBM Watson Studio a try. 
 
 The larger dataset was not available using IBM Watson Studio but I conducted my analysis just the same. IBM Watson Studio notebooks were a much easier way to use Spark for distributed computing in my opinion. 
