@@ -29,13 +29,13 @@ The data was provided by Udacity and is intended to simulate music streaming log
 I visualized some intutions I had about the data. My intuitions that were most clearly supported by the visuals are the followin
 
 #### How long a user has had their account
-![age of account](time_since_registration.png)
+![age of account](images/time_since_registration.png)
 
 #### The variety of artists listened to 
-![variety of artists](variety_of_artists.png)
+![variety of artists](images/variety_of_artists.png)
 
 #### Average number of songs in a session 
-![average_sess_len](avg_sess_length.png)
+![average_sess_len](images/avg_sess_length.png)
 
 ### Creating Features 
 
