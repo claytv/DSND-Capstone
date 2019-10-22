@@ -14078,13 +14078,13 @@ div#notebook {
 <li>Test Accuracy: 0.8</li>
 <li>Test F1-Score: 0.7</li>
 </ul>
-<h4 id="Logistic-Regression-(-maxIter=10-,--regParam=-0.0)">Logistic Regression ( maxIter=10 ,  regParam= 0.0)<a class="anchor-link" href="#Logistic-Regression-(-maxIter=10-,--regParam=-0.0)">&#182;</a></h4><ul>
+<h4 id="Logistic-Regression-(-maxIter=10-,--regParam=-0.3)">Logistic Regression ( maxIter=10 ,  regParam= 0.3)<a class="anchor-link" href="#Logistic-Regression-(-maxIter=10-,--regParam=-0.3)">&#182;</a></h4><ul>
 <li>Test Accuracy: 0.81</li>
-<li>Test F1-Score: 0.74</li>
+<li>Test F1-Score: 0.71</li>
 </ul>
-<h4 id="Decision-Tree-(-impurity=-'entropy'-,-maxDepth=-2)">Decision Tree ( impurity= 'entropy' , maxDepth= 2)<a class="anchor-link" href="#Decision-Tree-(-impurity=-'entropy'-,-maxDepth=-2)">&#182;</a></h4><ul>
-<li>Test Accuracy: 0.77</li>
-<li>Test F1-Score: 0.77</li>
+<h4 id="Decision-Tree-(-impurity=-'entropy'-,-maxDepth=-3)">Decision Tree ( impurity= 'entropy' , maxDepth= 3)<a class="anchor-link" href="#Decision-Tree-(-impurity=-'entropy'-,-maxDepth=-3)">&#182;</a></h4><ul>
+<li>Test Accuracy: 0.8</li>
+<li>Test F1-Score: 0.78</li>
 </ul>
 <h4 id="Gradient-Boosted-Trees-(-maxIter=-5-,-maxDepth=-10)">Gradient Boosted Trees ( maxIter= 5 , maxDepth= 10)<a class="anchor-link" href="#Gradient-Boosted-Trees-(-maxIter=-5-,-maxDepth=-10)">&#182;</a></h4><ul>
 <li>Test Accuracy: 0.71</li>
@@ -14125,7 +14125,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ibmos2spark</span>
@@ -14150,6 +14150,26 @@ div#notebook {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Waiting for a Spark session to start...
+Spark Initialization Done! ApplicationId = app-20191022041714-0000
+KERNEL_ID = 1258f7d9-8c6d-4c27-8982-fd333c113193
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -14272,7 +14292,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Selecting half of the features in each one so that it shows in a nicer format</span>
@@ -14792,7 +14812,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_thumbs_up</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">,</span> <span class="s1">&#39;page&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;page&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Thumbs Up&#39;</span><span class="p">)</span> \
@@ -14810,7 +14830,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax5</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">()</span>
@@ -14864,7 +14884,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Helpful dataframes</span>
@@ -14894,7 +14914,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">upgrades_downgrades</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">,</span> <span class="s1">&#39;page&#39;</span><span class="p">,</span> <span class="s1">&#39;ts&#39;</span><span class="p">)</span> \
@@ -14908,7 +14928,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">latest</span> <span class="o">=</span> <span class="n">upgrades_downgrades</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;ts&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;latest&#39;</span><span class="p">))</span>
@@ -14938,7 +14958,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">latest_user_event</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">,</span><span class="s1">&#39;ts&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;ts&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;ts&#39;</span><span class="p">))</span>
@@ -14952,7 +14972,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">days_since_reg</span> <span class="o">=</span> <span class="n">reg_latest</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">,</span><span class="s1">&#39;days_since_reg&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dropDuplicates</span><span class="p">([</span><span class="s1">&#39;userId&#39;</span><span class="p">])</span>
@@ -14979,7 +14999,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_thumbs_up</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">,</span> <span class="s1">&#39;page&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;page&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Thumbs Up&#39;</span><span class="p">)</span> \
@@ -15007,7 +15027,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sessions</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">,</span> <span class="s1">&#39;sessionId&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">,</span><span class="s1">&#39;sessionId&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -15036,7 +15056,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_artists</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">,</span> <span class="s1">&#39;artist&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">,</span><span class="s1">&#39;artist&#39;</span><span class="p">)</span> \
@@ -15064,7 +15084,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">add_playlist</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;userId&#39;</span><span class="p">,</span> <span class="s1">&#39;page&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s1">&#39;page&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Add to Playlist&#39;</span><span class="p">)</span>
@@ -15085,7 +15105,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Joins all of the individual features together</span>
@@ -15104,7 +15124,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Puts the features in a vector format</span>
@@ -15121,7 +15141,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Scales the data</span>
@@ -15137,7 +15157,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Splits the data for training and testing</span>
@@ -15166,7 +15186,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Assumes every one has churned</span>
@@ -15180,7 +15200,7 @@ only showing top 20 rows
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">evaluator</span> <span class="o">=</span> <span class="n">MulticlassClassificationEvaluator</span><span class="p">(</span><span class="n">labelCol</span><span class="o">=</span><span class="s2">&quot;churned&quot;</span><span class="p">,</span><span class="n">predictionCol</span><span class="o">=</span><span class="s1">&#39;prediction&#39;</span><span class="p">)</span>
@@ -15216,7 +15236,7 @@ F-1 Score:0.06666666666666667
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Assumes no one has churned</span>
@@ -15230,7 +15250,7 @@ F-1 Score:0.06666666666666667
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">evaluator</span> <span class="o">=</span> <span class="n">MulticlassClassificationEvaluator</span><span class="p">(</span><span class="n">labelCol</span><span class="o">=</span><span class="s2">&quot;churned&quot;</span><span class="p">,</span><span class="n">predictionCol</span><span class="o">=</span><span class="s1">&#39;prediction&#39;</span><span class="p">)</span>
@@ -15273,7 +15293,7 @@ F-1 Score:0.7111111111111111
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Initialize classifier</span>
@@ -15327,7 +15347,7 @@ F-1 Score:0.7111111111111111
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training logistic regression classifier
-The training process for Logistic Regression took 768.3780760765076 seconds
+The training process for Logistic Regression took 856.6316072940826 seconds
 </pre>
 </div>
 </div>
@@ -15338,7 +15358,7 @@ The training process for Logistic Regression took 768.3780760765076 seconds
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
@@ -15372,7 +15392,7 @@ The training process for Logistic Regression took 768.3780760765076 seconds
 <pre>Logistic Regression | Training Data
 Accuracy: 0.75
 F-1 Score:0.6428571428571428
-The prediction process for Logistic Regression on training data took 164.0537028312683 seconds
+The prediction process for Logistic Regression on training data took 190.87163662910461 seconds
 </pre>
 </div>
 </div>
@@ -15383,7 +15403,7 @@ The prediction process for Logistic Regression on training data took 164.0537028
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
@@ -15415,9 +15435,9 @@ The prediction process for Logistic Regression on training data took 164.0537028
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Logistic Regression | Testing Data
-Accuracy: 0.8142857142857143
-F-1 Score:0.7434666666666666
-The prediction process for Logistic Regression on testing data took 173.28186011314392 seconds
+Accuracy: 0.8
+F-1 Score:0.7111111111111111
+The prediction process for Logistic Regression on testing data took 191.09886932373047 seconds
 </pre>
 </div>
 </div>
@@ -15428,7 +15448,7 @@ The prediction process for Logistic Regression on testing data took 173.28186011
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lr_best_maxIter</span> <span class="o">=</span> <span class="n">best_lr</span><span class="o">.</span><span class="n">bestModel</span><span class="o">.</span><span class="n">getOrDefault</span><span class="p">(</span><span class="s1">&#39;maxIter&#39;</span><span class="p">)</span>
@@ -15451,8 +15471,8 @@ The prediction process for Logistic Regression on testing data took 173.28186011
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The value for maxIter in the best logistic regression model is: 10
-The value for regParam in the best logistic regression model is: 0.0
+<pre>The value for maxIter in the best logistic regression model is: 5
+The value for regParam in the best logistic regression model is: 0.3
 </pre>
 </div>
 </div>
@@ -15523,7 +15543,8 @@ The value for regParam in the best logistic regression model is: 0.0
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The training process for Decision Tree took 1278.6049432754517 seconds
+<pre>Training the decisison tree classifier
+The training process for Decision Tree took 1407.2345662117004 seconds
 </pre>
 </div>
 </div>
@@ -15566,9 +15587,9 @@ The value for regParam in the best logistic regression model is: 0.0
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Decision Tree | Training Data
-Accuracy: 0.8081395348837209
-F-1 Score:0.8021733938380702
-The prediction process for Decision Tree on training data took 159.04235863685608 seconds
+Accuracy: 0.8255813953488372
+F-1 Score:0.8212449881772387
+The prediction process for Decision Tree on training data took 219.52750515937805 seconds
 </pre>
 </div>
 </div>
@@ -15611,9 +15632,9 @@ The prediction process for Decision Tree on training data took 159.0423586368560
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Decision Tree | Testing Data
-Accuracy: 0.7714285714285715
-F-1 Score:0.7714285714285715
-The prediction process for Decision Tree on testing data took 179.54874277114868 seconds
+Accuracy: 0.8
+F-1 Score:0.7772074815137017
+The prediction process for Decision Tree on testing data took 242.98044300079346 seconds
 </pre>
 </div>
 </div>
@@ -15648,7 +15669,7 @@ The prediction process for Decision Tree on testing data took 179.54874277114868
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>The value for impurity in the best decision tree model is: entropy
-The value for maxDepth in the best decision tree model is: 2
+The value for maxDepth in the best decision tree model is: 3
 </pre>
 </div>
 </div>
@@ -15720,7 +15741,7 @@ The value for maxDepth in the best decision tree model is: 2
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training the gradient boosted trees classifier
-The training process for GBT took 2544.100419998169 seconds
+The training process for GBT took 2586.8087322711945 seconds
 </pre>
 </div>
 </div>
@@ -15765,7 +15786,7 @@ The training process for GBT took 2544.100419998169 seconds
 <pre>GBT | Training Data
 Accuracy: 1.0
 F-1 Score:1.0
-The prediction process for GBT on training data took 164.63793921470642 seconds
+The prediction process for GBT on training data took 232.84026312828064 seconds
 </pre>
 </div>
 </div>
@@ -15808,9 +15829,9 @@ The prediction process for GBT on training data took 164.63793921470642 seconds
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>GBT | Testing Data
-Accuracy: 0.7142857142857143
+Accuracy: 0.7
 F-1 Score:0.7268518518518517
-The prediction process for GBT on testing data took 164.6397180557251 seconds
+The prediction process for GBT on testing data took 233.24833917617798 seconds
 </pre>
 </div>
 </div>
