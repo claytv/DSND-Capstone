@@ -58,12 +58,12 @@ I implemented and trained the models below using cross validation to return the 
 #### Naive Model ( Assumes no one churns )
 * Test Accuracy: 0.8
 * Test F1-Score: 0.7
-#### Logistic Regression ( maxIter=10 , regParam= 0.0)
+#### Logistic Regression ( maxIter=10 , regParam= 0.3)
 * Test Accuracy: 0.81
-* Test F1-Score: 0.74
-#### Decision Tree ( impurity= 'entropy' , maxDepth= 2)
-* Test Accuracy: 0.77
-* Test F1-Score: 0.77
+* Test F1-Score: 0.71
+#### Decision Tree ( impurity= 'entropy' , maxDepth= 3)
+* Test Accuracy: 0.8
+* Test F1-Score: 0.7
 #### Gradient Boosted Trees ( maxIter= 5 , maxDepth= 10)¶
 * Test Accuracy: 0.71
 * Test F1-Score: 0.73
@@ -72,9 +72,16 @@ I implemented and trained the models below using cross validation to return the 
 ## Discussion of Results
 The Naive model performed very well on this testing set because the distribution of classes was very uneven ( Not many users happened to cancel their account in the testing data ) which makes the naive model look really good. However, using the model with new data whos classifications are evenly split would produce far worse results. 
 
-With that being said, I think that Logistic Regression or Decisicon Tree would be the best model for new data based off of their accuracy and F1 scores. However, for this project we do not know what is being done when a user is predicted to cancel their account. 
+With that being said, I think that Decisicon Tree would be the best model for new data based off of accuracy and F1 scores. However, for this project we do not know what is being done when a user is predicted to cancel their account. 
 
 One assumption is that a promotion is offered when a user is predicted to cancel their account in order to incentivize the user to keep their account active. In this case if we assume that the cost of the promotion is signifigant and we want to minimize the number of promotions sent out we may look for a model that values precision more than accuracy. F1 score is the weighted average between precision and recall. Therefore, F1 may not be a good metric to look at in this situaion.
+
+## Improvements
+
+* Use more data ( Need more processing power )
+* Alter train/test split
+* Increase number of parameters in cross validation ( Train time goes way up )
+* Try more algorithms ( Train time was an issue )
 
 ## Issues Throughout the Project
 1.) The main issue I had throughout this project was setting up a cluster in order to leverage Sparks distributed computing. I first did this project with the small subset of data to get the structure down for using Spark. After this I headed over to AWS to create an EMR cluster with notebook attached. Working with the notebook was glitchy, difficult to configure and I could not get the notebook to properly convert to HTML so that others could see my work. After hours and hours of searching the internet for solutions combined with trial and error I decided to give IBM Watson Studio a try. 
