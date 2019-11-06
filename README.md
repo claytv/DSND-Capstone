@@ -1,6 +1,6 @@
 # Data Scientist Nanodegree Capstone Project
 ## Project Overview and Goal
-Capstone project for the Udacity Data Scientist Nanodegree. The goal of this project is to use Apache Spark to investigate and model music streaming data to predict when a user is going to cancel their account. Udacity provided four different prompts for the final project. I chose this project because it was the only one that required the use of Spark. I wanted to enhance and demonstrate my skills in Spark. 
+Capstone project for the Udacity Data Scientist Nanodegree. The goal of this project is to use Apache Spark to investigate and model music streaming data to predict when a user is going to cancel their account. Udacity provided four different prompts for the final project. I chose this project because it was the only one that required the use of Spark. I wanted to enhance and demonstrate my skills using Spark. 
 
 We were provided with a very small subset of the data to which I used to set up my code in a jupyter notebook locally. We then could run analysis on a very large data set ( ~25 million rows ) using an AWS EMR cluster or use a medium sized dataset (~500 thousand rows ) using IBM Watson Studio. I originally performed this analysis connected to an AWS EMR cluster but finished the project using IBM Watson Studio. I go into these issues more later in the report. 
 
